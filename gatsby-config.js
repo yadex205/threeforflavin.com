@@ -7,5 +7,15 @@ module.exports = {
         allExtensions: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        implementation: require('sass'),
+        importer: require('node-sass-glob-importer')(),
+        sassOptions: {
+          fiber: require('fibers'),
+        },
+      },
+    },
   ],
 };
