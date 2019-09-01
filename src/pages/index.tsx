@@ -1,7 +1,5 @@
 import React from 'react';
 
 export default function TopPage() {
-  return (
-    <div>toppage</div>
-  );
+  return <div>toppage</div>;
 }
