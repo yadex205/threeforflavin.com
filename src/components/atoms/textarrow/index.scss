@@ -1,0 +1,58 @@
+.a-textarrow {
+  $root: &;
+
+  position: relative;
+  display: inline-block;
+  padding-right: 2em;
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: Quicksand, sans-serif;
+  color: inherit;
+
+  @mixin bar {
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 0.075em;
+    background-color: $color-text;
+    transition: trans(background-color);
+  }
+
+  &__text {
+    display: inline-block;
+    transition: trans(transform);
+  }
+
+  &::before {
+    @include bar;
+    height: 0.15em;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+
+  &::after {
+    @include bar;
+    height: 60%;
+    width: 0.15em;
+    right: 0;
+    bottom: 0;
+    transform: rotate(-45deg);
+    transform-origin: 50% calc(100% - 0.075em);
+  }
+
+  &--link {
+    @include hover {
+      #{$root}__text {
+        transform: translateX(0.5em);
+        text-shadow: 0.05em 0.05em $color-theme;
+      }
+
+      &:before,
+      &:after {
+        background-color: $color-theme;
+      }
+    }
+  }
+}

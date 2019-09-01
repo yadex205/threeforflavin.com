@@ -1,1 +1,28 @@
 @import "~sanitize.css";
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+$color-text: #1a1a1a;
+$color-theme: #dcdc42;
+$size-breakpoint-sp: 640px;
+
+@mixin sp {
+  @media screen and (max-width: $size-breakpoint-sp) {
+    @content;
+  }
+}
+
+@mixin hover {
+  body:not(.touch) &:hover {
+    @content;
+  }
+}
+
+@function trans($property) {
+  @return $property 0.5s cubic-bezier(0.05, 0.8, 0.2, 1.0);
+}
+
+body {
+  color: $color-text;
+}
+
+@import "./components/atoms/**/*.scss";
