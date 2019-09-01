@@ -1,9 +1,13 @@
 @import "~sanitize.css";
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
 
+$color-bg: #f8f8f8;
 $color-text: #1a1a1a;
 $color-theme: #dcdc42;
+$color-shadow: #a0a0a0;
 $size-breakpoint-sp: 640px;
+$size-maxwidth-pc: 1280px;
+$size-margin-pc: 80px;
 
 @mixin sp {
   @media screen and (max-width: $size-breakpoint-sp) {
@@ -22,7 +26,9 @@ $size-breakpoint-sp: 640px;
 }
 
 body {
+  background-color: $color-bg;
   color: $color-text;
 }
 
 @import "./components/atoms/**/*.scss";
+@import "./components/organisms/**/*.scss";

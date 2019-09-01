@@ -1,0 +1,36 @@
+.o-top-mainvisual {
+  position: relative;
+  width: 100%;
+
+  &__imagewrapper {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px;
+    border: 8px solid $color-theme;
+    border-radius: 6px;
+
+    @include smallpc {
+      padding: 7.8125vw;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  &__logo {
+    position: absolute;
+    width: 160px;
+    right: 50px;
+    bottom: 50px;
+
+    @include smallpc {
+      width: 12.5vw;
+      right: 3.90625vw;
+      bottom: 3.90625vw;
+    }
+  }
+}
