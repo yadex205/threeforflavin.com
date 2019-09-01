@@ -219,3 +219,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/web,node,code,linux,macos,emacs,windows
+
+
+# Gatsby.js
+
+public
