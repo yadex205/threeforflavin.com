@@ -14,7 +14,7 @@
     content: '';
     position: absolute;
     display: block;
-    border-radius: 0.075em;
+    border-radius: 1em;
     background-color: $color-text;
     transition: trans(background-color);
   }
@@ -26,7 +26,7 @@
 
   &::before {
     @include bar;
-    height: 0.15em;
+    height: 0.16em;
     width: 100%;
     left: 0;
     bottom: 0;
@@ -35,11 +35,11 @@
   &::after {
     @include bar;
     height: 60%;
-    width: 0.15em;
+    width: 0.16em;
     right: 0;
     bottom: 0;
     transform: rotate(-45deg);
-    transform-origin: 50% calc(100% - 0.075em);
+    transform-origin: 50% calc(100% - 0.1em);
   }
 
   &--link {

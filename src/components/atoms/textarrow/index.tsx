@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 interface NormalProps {
-  children: string;
+  children: string | string[];
 }
 
 interface LinkProps extends NormalProps {

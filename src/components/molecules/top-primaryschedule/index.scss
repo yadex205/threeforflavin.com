@@ -1,0 +1,71 @@
+.m-top-primaryschedule {
+  $root: &;
+
+  position: relative;
+  display: flex;
+  height: 250px;
+  padding: 0 250px 0 60px;
+  align-items: center;
+  border-radius: 125px;
+  text-decoration: none;
+  color: inherit;
+
+  @include hover {
+    background-color: $color-theme;
+  }
+
+  &__circle {
+    position: absolute;
+    display: flex;
+    width: 250px;
+    height: 250px;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    border-radius: 125px;
+    background-color: $color-theme;
+    font-size: 24px;
+    font-weight: 700;
+    color: transparent;
+    transition: trans(left);
+  }
+
+  @include hover {
+    #{$root}__circle {
+      left: calc(100% - 250px);
+      transform: scale(0.95);
+      background-color: $color-bg;
+      color: $color-text;
+      transition: trans(left), trans(color) 0.3s;
+    }
+  }
+
+  .a-textarrow {
+    position: relative;
+    margin-bottom: 24px;
+    font-size: 18px;
+  }
+
+  &__title {
+    position: relative;
+    display: -webkit-box;
+    width: 100%;
+    max-height: 2.8em;
+    margin-bottom: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    line-height: 1.4;
+    font-size: 24px;
+    color: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    @include use-palt;
+  }
+
+  &__venue {
+    position: relative;
+    font-size: 18px;
+  }
+}

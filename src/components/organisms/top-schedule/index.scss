@@ -1,0 +1,28 @@
+.o-top-schedule {
+  .m-top-primaryschedule {
+    margin-bottom: 64px;
+  }
+
+  &__sublist {
+    display: flex;
+    margin: -30px 0 30px -30px;
+    padding: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+
+    & > li {
+      flex: 0 1 calc(50% - 30px);
+      margin: 30px 0 0 30px;
+      padding: 0;
+    }
+  }
+
+  &__morewrapper {
+    text-align: center;
+
+    .a-textarrow {
+      font-size: 24px;
+    }
+  }
+}
