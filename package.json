@@ -26,6 +26,7 @@
     "gatsby-plugin-typescript": "^2.1.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-twitter-widgets": "^1.7.1",
     "sanitize.css": "^11.0.0"
   },
   "devDependencies": {

@@ -1,0 +1,13 @@
+.o-footer {
+  margin-top: 120px;
+  padding: 40px 0;
+  border-top: 4px solid $color-theme;
+
+  &__inner {
+    width: 100%;
+    max-width: $size-maxwidth-pc;
+    margin: 0 auto;
+    padding: 0 $size-margin-pc;
+    font-size: 14px;
+  }
+}
