@@ -1,0 +1,114 @@
+.o-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  &__main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(16px);
+    background-color: rgba($color-bg, 0.9);
+    opacity: 0;
+    transition: trans(opacity);
+  }
+
+  &--opened &__main {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__navwrapper {
+    display: flex;
+    width: 100%;
+    max-width: $size-maxwidth-pc;
+    margin: 0 auto;
+    padding: 0 $size-margin-pc;
+    align-items: center;
+  }
+
+  &__logosection {
+    flex: 1 1 50%;
+
+    & > img {
+      display: block;
+      width: 240px;
+      margin: 0 auto;
+    }
+  }
+
+  &__navsection {
+    flex: 1 1 50%;
+  }
+
+  &__primarynav {
+    margin: 0 0 24px 0;
+    padding: 0;
+    list-style-type: none;
+
+    & > li {
+      & > a {
+        display: block;
+        text-decoration: none;
+        line-height: 2;
+        color: inherit;
+        font-size: 32px;
+        transition: trans(color);
+
+        @include hover {
+          color: $color-theme;
+        }
+      }
+    }
+  }
+
+  &__secondarynav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    & > li {
+      & > a {
+        display: block;
+        text-decoration: none;
+        line-height: 2;
+        color: inherit;
+        font-size: 16px;
+        transition: trans(color);
+
+        @include hover {
+          color: $color-theme;
+        }
+      }
+    }
+  }
+
+  &__hamburger {
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    left: 0;
+    top: 28px;
+    pointer-events: none;
+  }
+
+  &__hamburgeradjuster {
+    display: flex;
+    width: 100%;
+    max-width: $size-maxwidth-pc;
+    margin: 0 auto;
+    padding: 0 $size-margin-pc;
+    justify-content: flex-end;
+
+    & > .a-hamburger {
+      width: 64px;
+      height: 64px;
+      pointer-events: auto;
+    }
+  }
+}

@@ -7,7 +7,7 @@
     height: 120px;
     max-width: $size-maxwidth-pc;
     margin: 0 auto;
-    padding: 0 $size-margin-pc;
+    padding: 0 #{$size-margin-pc * 2.2} 0 $size-margin-pc;
     justify-content: space-between;
     align-items: center;
     font-size: 22px;
