@@ -44,7 +44,7 @@ module.exports = {
     'no-eval': 2,
     'no-floating-decimal': 2,
     'no-irregular-whitespace': 2,
-    'no-magic-numbers': 1,
+    'no-magic-numbers': 0,
     'no-multi-spaces': 2,
     'no-unused-vars': 2,
     'no-use-before-define': 2,

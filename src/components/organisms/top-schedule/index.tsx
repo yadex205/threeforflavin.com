@@ -21,7 +21,7 @@ const TopSchedule: React.FC = () => (
       </li>
     </ul>
     <div className="o-top-schedule__morewrapper">
-      <Textarrow.Link href="#">MORE</Textarrow.Link>
+      <Textarrow.Link href="/live">MORE</Textarrow.Link>
     </div>
   </div>
 );

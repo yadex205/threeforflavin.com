@@ -1,0 +1,20 @@
+.m-pagination {
+  display: flex;
+  justify-content: center;
+
+  &__item,
+  &__ellipsis {
+    padding: 8px 20px;
+    line-height: 1;
+    font-size: 20px;
+  }
+
+  &__item {
+    cursor: pointer;
+    transition: trans(color);
+
+    @include hover {
+      color: $color-theme;
+    }
+  }
+}
