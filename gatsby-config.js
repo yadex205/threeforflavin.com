@@ -31,5 +31,6 @@ module.exports = {
         siteUrl: 'https://www.threeforflavin.com',
       },
     },
+    'gatsby-plugin-react-helmet',
   ],
 };
