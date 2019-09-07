@@ -7,7 +7,7 @@ import Section from 'components/organisms/section';
 // import artworkFlavinRightNow from 'images/artworks/flavin-right-now.png';
 import artworkSprout from 'images/artworks/sprout.jpg';
 import artworkReply from 'images/artworks/reply.jpg';
-import artworkBallad from 'images/artworks/ballad.png';
+import artworkBallad from 'images/artworks/ballad.jpg';
 
 export default function DiscographyIndex() {
   return (
