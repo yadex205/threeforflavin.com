@@ -1,0 +1,18 @@
+.m-breadcrumb {
+  display: flex;
+
+  &__separator {
+    padding: 0 1em;
+
+    &:last-child {
+      display: none;
+    }
+  }
+
+  &__item {
+    max-width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

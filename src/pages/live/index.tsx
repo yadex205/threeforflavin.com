@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from 'layout';
 import { Live } from 'lib/models';
 import H1 from 'components/atoms/h1';
+import Breadcrumb, { BreadcrumbItem } from 'components/molecules/breadcrumbs';
 import Section from 'components/organisms/section';
 import Livelist, { LiveLivelistItem as LivelistItem } from 'components/molecules/live-livelist';
 
@@ -38,6 +39,10 @@ export default function LiveIndex(props: Props) {
   return (
     <Layout>
       <Section>
+        <Breadcrumb>
+          <BreadcrumbItem href="/">TOP</BreadcrumbItem>
+          <BreadcrumbItem>LIVE</BreadcrumbItem>
+        </Breadcrumb>
         <H1>Live schedule</H1>
         <Livelist>
           {props.data.allContentfulLive.edges.map(({ node }) => (

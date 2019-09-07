@@ -22,4 +22,8 @@
       z-index: -1;
     }
   }
+
+  &--nobar &__inner::before {
+    display: none;
+  }
 }

@@ -4,6 +4,7 @@ import dayjs from 'dayjs';
 import Layout from 'layout';
 import { Live } from 'lib/models';
 import H1 from 'components/atoms/h1';
+import Breadcrumb, { BreadcrumbItem } from 'components/molecules/breadcrumbs';
 import Section from 'components/organisms/section';
 import Livelist, { LiveLivelistItem as LivelistItem } from 'components/molecules/live-livelist';
 import Pagination from 'components/molecules/pagination';
@@ -45,6 +46,11 @@ export default function LiveHistoryIndex({ data: { allContentfulLive } }: Props)
   return (
     <Layout>
       <Section>
+        <Breadcrumb>
+          <BreadcrumbItem href="/">TOP</BreadcrumbItem>
+          <BreadcrumbItem href="/live">LIVE</BreadcrumbItem>
+          <BreadcrumbItem>HISTORY</BreadcrumbItem>
+        </Breadcrumb>
         <H1>Live history</H1>
         <Livelist>
           {allContentfulLive.edges.slice(sliceBegin, sliceBegin + MAX_AMOUNT).map(({ node }) => (

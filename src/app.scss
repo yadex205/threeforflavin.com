@@ -45,6 +45,22 @@ body {
   color: $color-text;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: trans(color);
+
+  @include hover {
+    text-decoration: underline;
+    color: $color-theme;
+  }
+
+  @include sp {
+    transition: none;
+    text-decoration: underline;
+  }
+}
+
 @import "./components/atoms/**/*.scss";
 @import "./components/molecules/**/*.scss";
 @import "./components/organisms/**/*.scss";

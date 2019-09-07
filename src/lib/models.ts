@@ -3,4 +3,9 @@ export interface Live {
   title: string;
   date: string;
   venue: string;
+  article?: {
+    childMarkdownRemark: {
+      html: string;
+    };
+  };
 }
