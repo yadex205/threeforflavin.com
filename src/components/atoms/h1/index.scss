@@ -4,6 +4,7 @@
   letter-spacing: 0.08em;
   font-size: 48px;
   font-weight: 400;
+  @include use-palt;
 
   &__inner {
     position: relative;
@@ -25,5 +26,10 @@
 
   &--nobar &__inner::before {
     display: none;
+  }
+
+  small {
+    line-height: 1;
+    font-size: 0.5em;
   }
 }

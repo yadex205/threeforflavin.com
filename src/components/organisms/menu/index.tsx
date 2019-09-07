@@ -19,21 +19,13 @@ const Menu: React.FC = () => {
                 <Link to="/live">LIVE</Link>
               </li>
               <li>
-                <Link to="/discography">DISCOGRAPHY</Link>
-              </li>
-              <li>
                 <Link to="/movie">MOVIE</Link>
               </li>
               <li>
+                <Link to="/discography">DISCOGRAPHY</Link>
+              </li>
+              <li>
                 <Link to="/biography">BIOGRAPHY</Link>
-              </li>
-              <li>
-                <Link to="/contact">CONTACT</Link>
-              </li>
-            </ul>
-            <ul className="o-menu__secondarynav">
-              <li>
-                <Link to="/policy">SITE POLICY</Link>
               </li>
             </ul>
           </nav>

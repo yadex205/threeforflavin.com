@@ -2,4 +2,28 @@
   h2 {
     @extend .a-h2
   }
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: trans(color);
+
+    @include hover {
+      text-decoration: underline;
+      color: $color-theme;
+    }
+
+    @include sp {
+      transition: none;
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    @include use-palt;
+  }
 }

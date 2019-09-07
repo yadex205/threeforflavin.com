@@ -37,7 +37,11 @@ export default function LiveEntry({ data: { live } }: Props) {
           <BreadcrumbItem href="/live">LIVE</BreadcrumbItem>
           <BreadcrumbItem>{live.title}</BreadcrumbItem>
         </Breadcrumb>
-        <H1 nobar>{live.title}</H1>
+        <H1 nobar>
+          {live.title}
+          <br />
+          <small>at {live.venue}</small>
+        </H1>
         <Article html={live.article && live.article.childMarkdownRemark.html} />
       </Section>
     </Layout>

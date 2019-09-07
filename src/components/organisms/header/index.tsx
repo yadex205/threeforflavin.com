@@ -14,10 +14,6 @@ const Header: React.FC = () => (
           </li>
           <li>-</li>
           <li>
-            <Link to="/discography">DISCOGRAPHY</Link>
-          </li>
-          <li>-</li>
-          <li>
             <Link to="/movie">MOVIE</Link>
           </li>
         </ul>

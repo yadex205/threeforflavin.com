@@ -16,5 +16,9 @@
     @include hover {
       color: $color-theme;
     }
+
+    &--current {
+      color: $color-theme;
+    }
   }
 }
