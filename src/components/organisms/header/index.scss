@@ -30,7 +30,7 @@
   }
 
   &__primarymenu {
-    @include sp {
+    @include croppc {
       display: none;
     }
 
