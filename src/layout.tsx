@@ -34,7 +34,7 @@ const Layout: React.FC<Props> = props => {
 };
 
 Layout.defaultProps = {
-  description: 'インスト・歌モノを奏でる、ポップスにジャズを取り入れたピアノスリーピースバンド。'
+  description: 'インスト・歌モノを奏でる、ポップスにジャズを取り入れたピアノスリーピースバンド。',
 };
 
 export default Layout;

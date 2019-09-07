@@ -1,0 +1,27 @@
+.o-transition {
+  &__page {
+    opacity: 0;
+    transition: trans(opacity);
+
+    &--appear,
+    &--appear-active,
+    &--enter,
+    &--enter-active,
+    &--exit,
+    &--exit-active {
+      pointer-events: none;
+    }
+
+    &--appear-done,
+    &--enter-done {
+      opacity: 1;
+    }
+
+    &--appear,
+    &--appear-active,
+    &--enter,
+    &--enter-active {
+      position: absolute;
+    }
+  }
+}
