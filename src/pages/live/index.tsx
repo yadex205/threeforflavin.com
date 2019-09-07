@@ -37,7 +37,7 @@ interface Props {
 
 export default function LiveIndex(props: Props) {
   return (
-    <Layout>
+    <Layout title="Live">
       <Section>
         <Breadcrumb>
           <BreadcrumbItem href="/">TOP</BreadcrumbItem>

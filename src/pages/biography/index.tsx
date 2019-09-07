@@ -8,7 +8,7 @@ import Section from 'components/organisms/section';
 
 export default function BiographyIndex() {
   return (
-    <Layout>
+    <Layout title="Biography">
       <Section>
         <Breadcrumb>
           <BreadcrumbItem href="/">TOP</BreadcrumbItem>

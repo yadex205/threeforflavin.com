@@ -11,7 +11,7 @@ import artworkBallad from 'images/artworks/ballad.jpg';
 
 export default function DiscographyIndex() {
   return (
-    <Layout>
+    <Layout title="Discography">
       <Section>
         <Breadcrumb>
           <BreadcrumbItem href="/">TOP</BreadcrumbItem>

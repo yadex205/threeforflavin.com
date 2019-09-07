@@ -30,7 +30,7 @@ interface Props {
 
 export default function LiveEntry({ data: { live } }: Props) {
   return (
-    <Layout>
+    <Layout title={`${live.title} - Live`}>
       <Section>
         <Breadcrumb>
           <BreadcrumbItem href="/">TOP</BreadcrumbItem>

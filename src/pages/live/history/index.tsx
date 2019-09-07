@@ -44,7 +44,7 @@ export default function LiveHistoryIndex({ data: { allContentfulLive } }: Props)
   const sliceBegin = startIndex + MAX_AMOUNT * (page - 1);
 
   return (
-    <Layout>
+    <Layout title="History - Live">
       <Section>
         <Breadcrumb>
           <BreadcrumbItem href="/">TOP</BreadcrumbItem>

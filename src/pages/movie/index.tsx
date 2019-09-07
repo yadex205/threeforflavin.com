@@ -8,7 +8,7 @@ import Section from 'components/organisms/section';
 
 export default function MovieIndex() {
   return (
-    <Layout>
+    <Layout title="Movie">
       <Section>
         <Breadcrumb>
           <BreadcrumbItem href="/">TOP</BreadcrumbItem>
