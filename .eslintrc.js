@@ -68,7 +68,8 @@ module.exports = {
     {
       files: ['./gatsby-*.js'],
       parserOptions: {
-        sourceType: 'module'
+        sourceType: 'module',
+        ecmaVersion: 2018,
       },
     },
     {
