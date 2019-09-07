@@ -1,2 +1,5 @@
 .o-article {
+  h2 {
+    @extend .a-h2
+  }
 }
