@@ -13,7 +13,11 @@ export const pageQuery = graphql`
       title
       date
       venue
-      article { childMarkdownRemark { html } }
+      article {
+        childMarkdownRemark {
+          html
+        }
+      }
     }
   }
 `;
@@ -21,7 +25,7 @@ export const pageQuery = graphql`
 interface Props {
   data: {
     live: Pick<Live, 'title' | 'date' | 'venue' | 'article'>;
-  }
+  };
 }
 
 export default function LiveEntry({ data: { live } }: Props) {

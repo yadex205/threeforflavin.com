@@ -17,7 +17,9 @@
     "start": "gatsby develop",
     "serve": "browser-sync public",
     "lint": "run-s lint:script",
-    "lint:script": "eslint ./ --ext .js --ext .ts --ext .tsx --color"
+    "lint:script": "eslint ./ --ext .js --ext .ts --ext .tsx --color",
+    "autofix": "run-s autofix:script:lint",
+    "autofix:script:lint": "eslint ./ --ext .js --ext .ts --ext .tsx --color --fix"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
