@@ -2,5 +2,10 @@
   &__twitter {
     width: 480px;
     margin: 0 auto;
+
+    @include sp {
+      width: calc(100% + #{$size-margin-sp * 2});
+      margin: 0 #{$size-margin-sp * -1};
+    }
   }
 }

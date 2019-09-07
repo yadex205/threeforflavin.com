@@ -4,7 +4,8 @@
   list-style-type: none;
 
   & > li {
-    margin: 0;
+    margin: 0 #{$size-margin-sp * -1};
+    padding: 0 $size-margin-sp;
     border-top: 1px solid $color-theme;
 
     &:last-child {
@@ -18,6 +19,11 @@
     align-items: center;
     text-decoration: none;
     color: inherit;
+
+    @include sp {
+      display: block;
+      padding: 20px 0;
+    }
   }
 
   &__date {
@@ -31,5 +37,9 @@
   &__venue {
     margin-left: 20px;
     flex: 0 0 200px;
+
+    @include sp {
+      margin-left: 0;
+    }
   }
 }

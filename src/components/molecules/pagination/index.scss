@@ -7,6 +7,10 @@
     padding: 8px 20px;
     line-height: 1;
     font-size: 20px;
+
+    @include sp {
+      padding: 8px 14px;
+    }
   }
 
   &__item {

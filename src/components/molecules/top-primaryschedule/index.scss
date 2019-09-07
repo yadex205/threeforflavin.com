@@ -10,6 +10,11 @@
   text-decoration: none;
   color: inherit;
 
+  @include sp {
+    height: 180px;
+    padding: 0;
+  }
+
   @include hover {
     background-color: $color-theme;
   }
@@ -29,6 +34,12 @@
     font-weight: 700;
     color: transparent;
     transition: trans(left);
+
+    @include sp {
+      width: 180px;
+      height: 180px;
+      left: -90px;
+    }
   }
 
   @include hover {
@@ -45,6 +56,11 @@
     position: relative;
     margin-bottom: 24px;
     font-size: 18px;
+
+    @include sp {
+      margin-bottom: 12px;
+      font-size: 13px;
+    }
   }
 
   &__title {
@@ -62,10 +78,18 @@
     -webkit-line-clamp: 2;
 
     @include use-palt;
+    @include sp {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
   }
 
   &__venue {
     position: relative;
     font-size: 18px;
+
+    @include sp {
+      font-size: 13px;
+    }
   }
 }

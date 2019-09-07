@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from 'layout';
+import Pcbr from 'components/utils/pcbr';
 import H1 from 'components/atoms/h1';
 import Breadcrumb, { BreadcrumbItem } from 'components/molecules/breadcrumbs';
 import Article from 'components/organisms/article';
@@ -17,7 +18,7 @@ export default function BiographyIndex() {
         <Article>
           <p>
             インスト・歌モノを奏でる、ポップスにジャズを取り入れたピアノスリーピースバンド。
-            <br />
+            <Pcbr />
             キャッチーでありながらも独特のアレンジと歌詞で魅了する。
           </p>
           <h2>Members</h2>

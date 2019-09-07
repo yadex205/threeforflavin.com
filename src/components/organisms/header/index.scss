@@ -11,6 +11,12 @@
     justify-content: space-between;
     align-items: center;
     font-size: 22px;
+
+    @include sp {
+      height: 80px;
+      padding: 0 $size-margin-sp;
+      font-size: 16px;
+    }
   }
 
   &__brand {
@@ -24,6 +30,10 @@
   }
 
   &__primarymenu {
+    @include sp {
+      display: none;
+    }
+
     & > ul {
       display: flex;
       margin: 0 -10px 0 0;

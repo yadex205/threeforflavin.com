@@ -9,10 +9,24 @@ $fontset-normal: Quicksand, tbchibirgothicplusk-pro, "Yu Gothic", YuGothic, Meir
 $size-breakpoint-smallpc: 1280px;
 $size-breakpoint-sp: 640px;
 $size-maxwidth-pc: 1280px;
+$size-minwidth-pc: 768px;
 $size-margin-pc: 80px;
+$size-margin-sp: 30px;
+
+@mixin pc {
+  @media screen and (min-width: $size-breakpoint-sp + 1) {
+    @content;
+  }
+}
 
 @mixin smallpc {
   @media screen and (max-width: $size-breakpoint-smallpc) {
+    @content;
+  }
+}
+
+@mixin croppc {
+  @media screen and (max-width: $size-minwidth-pc) {
     @content;
   }
 }
@@ -24,8 +38,10 @@ $size-margin-pc: 80px;
 }
 
 @mixin hover {
-  body:not(.touch) &:hover {
-    @content;
+  @include pc {
+    body:not(.touch) &:hover {
+      @content;
+    }
   }
 }
 
@@ -43,12 +59,21 @@ body {
   letter-spacing: 0.04em;
   font-family: $fontset-normal;
   color: $color-text;
+
+  @include pc {
+    min-width: $size-minwidth-pc;
+  }
+
+  @include sp {
+    font-size: 14px;
+  }
 }
 
 a {
   color: inherit;
 }
 
+@import "./components/utils/**/*.scss";
 @import "./components/atoms/**/*.scss";
 @import "./components/molecules/**/*.scss";
 @import "./components/organisms/**/*.scss";

@@ -3,11 +3,20 @@
   padding: 40px 0;
   border-top: 4px solid $color-theme;
 
+  @include sp {
+    margin-top: 80px;
+  }
+
   &__inner {
     width: 100%;
     max-width: $size-maxwidth-pc;
     margin: 0 auto;
     padding: 0 $size-margin-pc;
     font-size: 14px;
+
+    @include sp {
+      padding: 0 $size-margin-sp;
+      font-size: 12px;
+    }
   }
 }

@@ -1,6 +1,10 @@
 .m-breadcrumb {
   display: flex;
 
+  @include sp {
+    display: none;
+  }
+
   &__separator {
     padding: 0 1em;
 

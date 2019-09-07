@@ -4,6 +4,10 @@
   margin: 0 auto 120px;
   padding: 0 $size-margin-pc;
 
+  @include sp {
+    padding: 0 $size-margin-sp;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
