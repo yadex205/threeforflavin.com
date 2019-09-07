@@ -25,5 +25,11 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://www.threeforflavin.com',
+      },
+    },
   ],
 };
