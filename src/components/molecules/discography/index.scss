@@ -1,0 +1,17 @@
+.m-discography {
+  display: flex;
+
+  &__artwork {
+    width: 360px;
+    margin-right: 40px;
+
+    & > img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-size: 30px;
+  }
+}
