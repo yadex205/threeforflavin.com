@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from 'layout';
 import H1 from 'components/atoms/h1';
+import Breadcrumb, { BreadcrumbItem } from 'components/molecules/breadcrumbs';
 import Article from 'components/organisms/article';
 import Section from 'components/organisms/section';
 
@@ -8,6 +9,10 @@ export default function BiographyIndex() {
   return (
     <Layout>
       <Section>
+        <Breadcrumb>
+          <BreadcrumbItem href="/">TOP</BreadcrumbItem>
+          <BreadcrumbItem>BIOGRAPHY</BreadcrumbItem>
+        </Breadcrumb>
         <H1>Biography</H1>
         <Article>
           <p>
