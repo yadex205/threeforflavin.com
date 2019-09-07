@@ -3,7 +3,6 @@ import Header from 'components/organisms/header';
 import Footer from 'components/organisms/footer';
 import Menu from 'components/organisms/menu';
 
-
 const Layout: React.FC = props => {
   return (
     <>
@@ -13,6 +12,6 @@ const Layout: React.FC = props => {
       <Menu />
     </>
   );
-}
+};
 
 export default Layout;
