@@ -20,6 +20,7 @@ const Layout: React.FC<Props> = props => {
   return (
     <>
       <Helmet>
+        <html lang="ja" />
         <title>{title}</title>
         <meta name="description" content={props.description} />
         <meta property="og:title" content={title} />
