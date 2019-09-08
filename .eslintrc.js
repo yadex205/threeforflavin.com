@@ -25,7 +25,8 @@ module.exports = {
     'eol-last': 2,
     'eqeqeq': 2,
     'indent': [2, 2, {
-      SwitchCase: 1
+      SwitchCase: 1,
+      MemberExpression: 'off'
     }],
     'key-spacing': [2, {
       beforeColon: false,
@@ -95,7 +96,10 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/camelcase': 0,
         '@typescript-eslint/explicit-member-accessibility': 0,
-        '@typescript-eslint/indent': [2, 2, { SwitchCase: 1 }],
+        '@typescript-eslint/indent': [2, 2, {
+          SwitchCase: 1,
+          MemberExpression: 'off'
+        }],
         '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: '^_' }],
       }
     }

@@ -8,6 +8,40 @@
     padding: 0 $size-margin-sp;
   }
 
+  &--fullscreen {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - #{$size-headerheight-pc});
+
+    @include sp {
+      min-height: calc(100vh - #{$size-headerheight-sp});
+    }
+
+    & > * {
+      transform: translateY(-30px);
+
+      @include sp {
+        transform: translateY(-20px);
+      }
+    }
+  }
+
+  &--fullscreen ~ &--fullscreen {
+    min-height: 100vh;
+
+    @include sp {
+      min-height: 100vh;
+    }
+
+    & > * {
+      transform: none;
+
+      @include sp {
+        transform: none;
+      }
+    }
+  }
+
   &:last-child {
     margin-bottom: 0;
   }

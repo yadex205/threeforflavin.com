@@ -12,6 +12,8 @@ $size-maxwidth-pc: 1280px;
 $size-minwidth-pc: 768px;
 $size-margin-pc: 80px;
 $size-margin-sp: 30px;
+$size-headerheight-pc: 120px;
+$size-headerheight-sp: 80px;
 
 @mixin pc {
   @media screen and (min-width: $size-breakpoint-sp + 1) {

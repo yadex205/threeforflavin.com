@@ -19,7 +19,7 @@
     }
 
     @include sp {
-      padding: 5vw;
+      padding: 3vw 3vw 18vw;
       border-width: 4px;
     }
   }
@@ -49,9 +49,9 @@
     }
 
     @include sp {
-      width: 15vw;
-      right: 3vw;
-      bottom: 3vw;
+      width: 30vw;
+      right: calc(50% - 15vw);
+      bottom: 5vw;
     }
   }
 }

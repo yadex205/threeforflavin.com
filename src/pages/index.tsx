@@ -45,7 +45,7 @@ export default function TopPage({ data: { allContentfulLive } }: Props) {
 
   return (
     <Layout>
-      <Section>
+      <Section fullscreen>
         <TopMainvisual />
       </Section>
       <Section>

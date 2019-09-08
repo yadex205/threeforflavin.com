@@ -1,10 +1,8 @@
 .o-header {
-  margin-bottom: 10px;
-
   &__inner {
     display: flex;
     width: 100%;
-    height: 120px;
+    height: $size-headerheight-pc;
     max-width: $size-maxwidth-pc;
     margin: 0 auto;
     padding: 0 #{$size-margin-pc * 2.2} 0 $size-margin-pc;
@@ -13,7 +11,7 @@
     font-size: 22px;
 
     @include sp {
-      height: 80px;
+      height: $size-headerheight-sp;
       padding: 0 $size-margin-sp;
       font-size: 16px;
     }
