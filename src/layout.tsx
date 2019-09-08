@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Helmet from 'react-helmet';
 import Header from 'components/organisms/header';
 import Footer from 'components/organisms/footer';
@@ -10,7 +10,12 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = props => {
+  const [mounted, setMounted] = useState(false);
   const title = props.title ? `${props.title} - Three for Flavin` : 'Three for Flavin';
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <>
@@ -24,6 +29,7 @@ const Layout: React.FC<Props> = props => {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@ThreeforFlavin" />
         <meta name="twitter:creator" content="@ThreeforFlavin" />
+        <body style={{ opacity: mounted ? 1 : 0 }} />
       </Helmet>
       <Header />
       {props.children}
