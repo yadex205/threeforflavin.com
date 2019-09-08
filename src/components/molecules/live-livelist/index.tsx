@@ -21,12 +21,14 @@ interface Props {
   children: React.ReactElement<ItemProps> | React.ReactElement<ItemProps>[];
 }
 
-const LiveLivelist: React.FC<Props> = props => (
-  <ul className="m-live-livelist">
+const LiveLivelist = React.forwardRef<HTMLUListElement, Props>((props, ref) => (
+  <ul className="m-live-livelist" ref={ref}>
     {React.Children.map(props.children, child => (
       <li>{child}</li>
     ))}
   </ul>
-);
+));
+
+LiveLivelist.displayName = 'LiveLivelist';
 
 export default LiveLivelist;

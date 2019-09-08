@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, createRef } from 'react';
 import { graphql } from 'gatsby';
 import dayjs from 'dayjs';
+import { animateScroll } from 'react-scroll';
 import Layout from 'layout';
 import { Live } from 'lib/models';
 import H1 from 'components/atoms/h1';
@@ -37,11 +38,21 @@ interface Props {
 }
 
 export default function LiveHistoryIndex({ data: { allContentfulLive } }: Props) {
+  const livelistRef = createRef<HTMLUListElement>();
   const [page, setPage] = useState(1);
   const currentDate = new Date();
   const startIndex = allContentfulLive.edges.findIndex(({ node }) => dayjs(node.date).isBefore(currentDate));
   const length = Math.trunc((allContentfulLive.edges.length - startIndex + 1) / MAX_AMOUNT) + 1;
   const sliceBegin = startIndex + MAX_AMOUNT * (page - 1);
+
+  function onRequest(index: number) {
+    setPage(index);
+    if (livelistRef.current) {
+      animateScroll.scrollTo(livelistRef.current.getBoundingClientRect().top + window.pageYOffset - 120, {
+        duration: 500,
+      });
+    }
+  }
 
   return (
     <Layout title="History - Live">
@@ -52,7 +63,7 @@ export default function LiveHistoryIndex({ data: { allContentfulLive } }: Props)
           <BreadcrumbItem>HISTORY</BreadcrumbItem>
         </Breadcrumb>
         <H1>Live history</H1>
-        <Livelist>
+        <Livelist ref={livelistRef}>
           {allContentfulLive.edges.slice(sliceBegin, sliceBegin + MAX_AMOUNT).map(({ node }) => (
             <LivelistItem
               key={node.slug}
@@ -63,7 +74,7 @@ export default function LiveHistoryIndex({ data: { allContentfulLive } }: Props)
             />
           ))}
         </Livelist>
-        <Pagination currentIndex={page} length={length} onRequest={index => setPage(index)} />
+        <Pagination currentIndex={page} length={length} onRequest={onRequest} />
       </Section>
     </Layout>
   );
