@@ -29,6 +29,12 @@
 
   &__morewrapper {
     text-align: center;
+    opacity: 0;
+
+    &--appeared {
+      transition: trans(opacity);
+      opacity: 1;
+    }
 
     .a-textarrow {
       font-size: 24px;

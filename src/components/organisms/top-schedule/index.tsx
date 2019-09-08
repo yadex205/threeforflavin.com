@@ -1,5 +1,7 @@
 import React from 'react';
 import dayjs from 'dayjs';
+import classnames from 'lib/classnames';
+import Appear from 'components/utils/appear';
 import Textarrow from 'components/atoms/textarrow';
 import TopPrimaryschedule from 'components/molecules/top-primaryschedule';
 import TopSubschedule from 'components/molecules/top-subschedule';
@@ -33,9 +35,17 @@ const TopSchedule: React.FC<Props> = props => {
               </li>
             ))}
           </ul>
-          <div className="o-top-schedule__morewrapper">
-            <Textarrow.Link href="/live">MORE</Textarrow.Link>
-          </div>
+          <Appear>
+            {appeared => (
+              <div
+                className={classnames('o-top-schedule__morewrapper', {
+                  'o-top-schedule__morewrapper--appeared': appeared,
+                })}
+              >
+                <Textarrow.Link href="/live">MORE</Textarrow.Link>
+              </div>
+            )}
+          </Appear>
         </>
       ) : null}
     </div>

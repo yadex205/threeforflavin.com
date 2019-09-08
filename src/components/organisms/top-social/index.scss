@@ -1,4 +1,13 @@
 .o-top-social {
+  opacity: 0;
+  transform: translateY(100px);
+
+  &--appeared {
+    opacity: 1;
+    transform: translateY(0);
+    transition: trans(opacity), trans(transform);
+  }
+
   &__twitter {
     width: 480px;
     margin: 0 auto;

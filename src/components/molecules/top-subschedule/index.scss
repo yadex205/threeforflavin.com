@@ -1,13 +1,22 @@
 .m-top-subschedule {
+  $root: &;
+
   position: relative;
   display: block;
   padding: 0 40px 0 60px;
   text-decoration: none;
   color: inherit;
-  transition: trans(opacity);
+  opacity: 0;
+  transform: translateY(30px);
 
-  @include hover {
-    opacity: 0.5;
+  &--appeared {
+    transition: trans(opacity), trans(transform);
+    opacity: 1;
+    transform: translateY(0);
+
+    @include hover {
+      opacity: 0.5;
+    }
   }
 
   @include sp {
