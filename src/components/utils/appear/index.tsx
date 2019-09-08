@@ -25,7 +25,7 @@ const Appear: React.FC<Props> = props => {
         if (el.getBoundingClientRect().top < window.innerHeight * 0.8) {
           setAppeared(true);
         }
-      }, 300);
+      }, 200);
       window.addEventListener('scroll', onScroll);
 
       return () => {
