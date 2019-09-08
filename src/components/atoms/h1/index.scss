@@ -1,4 +1,6 @@
 .a-h1 {
+  $root: &;
+
   position: relative;
   margin: 2em 0 3em;
   letter-spacing: 0.08em;
@@ -23,8 +25,13 @@
       left: 50%;
       top: 59%;
       border-radius: 4px;
-      transform: translate(-50%, -50%);
+      transform: translate(-200%, -50%);
       z-index: -1;
+      transition: trans(transform);
+
+      #{$root}--appeared & {
+        transform: translate(-50%, -50%);
+      }
 
       @include sp {
         width: calc(100% + 3em);

@@ -1,4 +1,13 @@
 .o-article {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: trans(opacity), trans(transform);
+
+  &--appeared {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   h2 {
     @extend .a-h2
   }

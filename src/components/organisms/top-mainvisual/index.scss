@@ -1,4 +1,6 @@
 .o-top-mainvisual {
+  $root: &;
+
   position: relative;
   width: 100%;
 
@@ -7,7 +9,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 100px;
-    border: 8px solid $color-theme;
+    border: 0px solid $color-theme;
     border-radius: 6px;
 
     @include smallpc {
@@ -20,14 +22,30 @@
 
     @include sp {
       padding: 3vw 3vw 18vw;
-      border-width: 4px;
+      border-width: 0;
     }
+
+    #{$root}--appeared & {
+      transition: trans(border-width) 0.5s;
+      border-width: 8px;
+
+      @include sp {
+        border-width: 4px;
+      }
+    }
+
   }
 
   &__image {
     display: block;
     width: 100%;
     border-radius: 4px;
+    opacity: 0;
+
+    #{$root}--appeared & {
+      opacity: 1;
+      transition: trans(opacity);
+    }
   }
 
   &__logo {
