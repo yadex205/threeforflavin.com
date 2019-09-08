@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Link } from 'gatsby';
 import dayjs from 'dayjs';
 
@@ -23,9 +24,13 @@ interface Props {
 
 const LiveLivelist = React.forwardRef<HTMLUListElement, Props>((props, ref) => (
   <ul className="m-live-livelist" ref={ref}>
-    {React.Children.map(props.children, child => (
-      <li>{child}</li>
-    ))}
+    <TransitionGroup component={null} appear={true}>
+      {React.Children.map(props.children, child => (
+        <CSSTransition timeout={500} classNames="m-live-livelist__itemwrapper-">
+          <li className="m-live-livelist__itemwrapper">{child}</li>
+        </CSSTransition>
+      ))}
+    </TransitionGroup>
   </ul>
 ));
 
